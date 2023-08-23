@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230821204806">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230823161231">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -47,7 +47,7 @@
 		</a>
 		<main class="page">
 			<section class="page__intro intro">
-				<picture><source srcset="img/lazy.webp" type="image/webp"><img class="intro__bg" data-lazy-src="img/bg.jpg" src="img/lazy.png" data-lazy-no-spin alt="Background image"></picture>
+				<picture><source data-lazy-srcset="img/bg.webp" srcset="img/lazy.webp" type="image/webp"><img class="intro__bg" data-lazy-src="img/bg.jpg" src="img/lazy.png" data-lazy-no-spin alt="Background image"></picture>
 				<div class="container">
 					<div data-fullscreen class="intro__inner">
 						<div class="intro__content">
@@ -103,14 +103,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="benefits__image-ibg" data-watch data-watch-once><picture><source srcset="img/lazy.webp" type="image/webp"><img data-lazy-src="img/benefits/image.jpg" src="img/lazy.png" alt="Image"></picture></div>
+						<div class="benefits__image-ibg" data-watch data-watch-once><picture><source data-lazy-srcset="img/benefits/image.webp" srcset="img/lazy.webp" type="image/webp"><img data-lazy-src="img/benefits/image.jpg" src="img/lazy.png" alt="Image"></picture></div>
 					</div>
 				</div>
 			</section>
 			<section class="page__portfolio portfolio pt-150">
 				<div class="container">
 					<h2 class="portfolio__title portfolio__title title title_center">Портфолио</h2>
-					<div class="portfolio__body" data-filter>
+					<div class="portfolio__body" data-filter  data-filter-del-items>
 						<nav class="portfolio__categories swiper_scroll">
 							<div class="portfolio__categories-wrapper swiper-wrapper">
 								<button data-filter-category="all" type="button" class="portfolio__category swiper-slide _active-category">
@@ -134,7 +134,7 @@
 						</nav>
 						<div class="portfolio__projects" data-filter-items data-watch data-watch-margin="-100px" data-watch-once>
 							<a href="./project2.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/01.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/01.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/01.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ЖК ЕВРОПЕЙСКИЙ</h4>
@@ -145,7 +145,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="house" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/02.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/02.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/02.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ОТРАДНАЯ</h4>
@@ -156,7 +156,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="commercial" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/03.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/03.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/03.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ПРОФПОТОК</h4>
@@ -167,7 +167,7 @@
 								</div>
 							</a>
 							<a href="./project2.html" data-filter-item="commercial" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/04.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/04.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/04.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ГЕН МОЛОДОСТИ</h4>
@@ -178,7 +178,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/05.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/05.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/05.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">БАВАРСКАЯ</h4>
@@ -190,7 +190,7 @@
 							</a>
 
 							<a href="./project2.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/06.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/06.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/06.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ЖК ТУРГЕНЕВ</h4>
@@ -201,7 +201,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="house" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/07.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/07.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/07.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">ДОМ В НЕМЕЦКОЙ ДЕРЕВНЕ</h4>
@@ -212,7 +212,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="commercial" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/08.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/08.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/08.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">loft</h4>
@@ -223,7 +223,7 @@
 								</div>
 							</a>
 							<a href="./project2.html" data-filter-item="house" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/09.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/09.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/09.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">loft</h4>
@@ -234,7 +234,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/10.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/10.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/10.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">loft</h4>
@@ -246,7 +246,7 @@
 							</a>
 
 							<a href="./project.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/11.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/11.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/11.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">loft</h4>
@@ -257,7 +257,7 @@
 								</div>
 							</a>
 							<a href="./project2.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/12.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/12.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/12.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">Название в две строки</h4>
@@ -268,7 +268,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="commercial" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/13.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/13.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/13.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">Loft</h4>
@@ -279,7 +279,7 @@
 								</div>
 							</a>
 							<a href="./project2.html" data-filter-item="flat" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/14.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/14.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/14.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">Название в две строки</h4>
@@ -290,7 +290,7 @@
 								</div>
 							</a>
 							<a href="./project.html" data-filter-item="house" class="portfolio__project portfolio-project portfolio-project-ibg">
-								<picture><source srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/15.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
+								<picture><source data-lazy-srcset="img/portfolio/15.webp" srcset="img/lazy.webp" type="image/webp"><img alt="Image" data-lazy-src="img/portfolio/15.jpg" src="img/lazy.png" class="portfolio-project__image"></picture>
 								<div class="portfolio-project__content">
 									<div class="portfolio-project__content-wrapper">
 										<h4 class="portfolio-project__title">loft</h4>
@@ -356,7 +356,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230821204806"></script>
+	<script src="js/app.min.js?_v=20230823161231"></script>
 </body>
 
 </html>
