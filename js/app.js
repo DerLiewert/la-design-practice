@@ -308,7 +308,7 @@
     class Popup {
         constructor(options) {
             let config = {
-                logging: true,
+                logging: false,
                 init: true,
                 attributeOpenButton: "data-popup",
                 attributeCloseButton: "data-close",
@@ -3166,7 +3166,7 @@
         images: core_images
     };
     const extendedDefaults = {};
-    class core_Swiper {
+    class Swiper {
         constructor(...args) {
             let el;
             let params;
@@ -3180,7 +3180,7 @@
                     const newParams = utils_extend({}, params, {
                         el: containerEl
                     });
-                    swipers.push(new core_Swiper(newParams));
+                    swipers.push(new Swiper(newParams));
                 }));
                 return swipers;
             }
@@ -3516,26 +3516,26 @@
             return defaults;
         }
         static installModule(mod) {
-            if (!core_Swiper.prototype.__modules__) core_Swiper.prototype.__modules__ = [];
-            const modules = core_Swiper.prototype.__modules__;
+            if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
+            const modules = Swiper.prototype.__modules__;
             if ("function" === typeof mod && modules.indexOf(mod) < 0) modules.push(mod);
         }
         static use(module) {
             if (Array.isArray(module)) {
-                module.forEach((m => core_Swiper.installModule(m)));
-                return core_Swiper;
+                module.forEach((m => Swiper.installModule(m)));
+                return Swiper;
             }
-            core_Swiper.installModule(module);
-            return core_Swiper;
+            Swiper.installModule(module);
+            return Swiper;
         }
     }
     Object.keys(prototypes).forEach((prototypeGroup => {
         Object.keys(prototypes[prototypeGroup]).forEach((protoMethod => {
-            core_Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+            Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
         }));
     }));
-    core_Swiper.use([ Resize, Observer ]);
-    const core = core_Swiper;
+    Swiper.use([ Resize, Observer ]);
+    const core = Swiper;
     function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
         const document = ssr_window_esm_getDocument();
         if (swiper.params.createElements) Object.keys(checkProps).forEach((key => {
@@ -6543,22 +6543,32 @@ PERFORMANCE OF THIS SOFTWARE.
     }));
     const lazyLoaderOptions = {
         root: null,
-        rootMargin: "100px",
+        rootMargin: "100px 0px",
         threshold: 0
     };
     const lazyLoaderObserver = new IntersectionObserver(((entries, observer) => {
         entries.forEach((el => {
             if (el.isIntersecting) {
                 const img = el.target;
-                const src = img.getAttribute("data-lazy-src");
-                img.setAttribute("src", src);
-                if (!img.hasAttribute("data-lazy-no-spin")) img.addEventListener("load", (() => {
+                if (img.hasAttribute("data-lazy-src")) {
+                    const src = img.getAttribute("data-lazy-src");
+                    img.setAttribute("src", src);
+                } else if (img.hasAttribute("data-lazy-srcset")) {
+                    const srcset = img.getAttribute("data-lazy-srcset");
+                    img.setAttribute("srcset", srcset);
+                }
+                if (!img.hasAttribute("data-lazy-no-spin")) if (img.hasAttribute("data-lazy-src")) img.addEventListener("load", (() => {
+                    img.removeAttribute("data-lazy-src");
                     if (img.nextElementSibling && img.nextElementSibling.classList.contains("lazy-preloader")) img.nextElementSibling.remove();
-                }));
+                })); else if (img.hasAttribute("data-lazy-srcset") && img.srcset) {
+                    img.removeAttribute("data-lazy-srcset");
+                    if (img.nextElementSibling && img.nextElementSibling.classList.contains("lazy-preloader")) img.nextElementSibling.remove();
+                }
+                lazyLoaderObserver.unobserve(img);
             }
         }));
     }), lazyLoaderOptions);
-    const lazyLoaderImgs = document.querySelectorAll("[data-lazy-src]");
+    const lazyLoaderImgs = document.querySelectorAll("img[data-lazy-src],source[data-lazy-srcset]");
     if (lazyLoaderImgs.length) lazyLoaderImgs.forEach((img => {
         lazyLoaderObserver.observe(img);
         if (!img.hasAttribute("data-lazy-no-spin")) img.insertAdjacentHTML("afterend", `<div class="lazy-preloader"></div>`);
