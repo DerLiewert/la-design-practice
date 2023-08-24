@@ -3546,8 +3546,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .title_h3 {
-    font-size: 1.25rem;
-    line-height: 1.35;
+    font-size: 1.25rem !important;
+    line-height: 1.35 !important;
     letter-spacing: 0.12em;
   }
 
